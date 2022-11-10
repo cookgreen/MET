@@ -58,7 +58,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(OGRE_HOME)\includes;..\Dependencies\etm-2.3.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OGRE_HOME)\lib\include;$(OGRE_HOME)\OgreMain\include;..\Dependencies\etm-2.3.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -67,7 +67,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>OgreMain_d.lib;EditableTerrainManager_d.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(OGRE_HOME)\lib;..\Dependencies\etm-2.3.1\bin\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(OGRE_HOME)\lib\lib\Debug;..\Dependencies\etm-2.3.1\bin\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AssemblyDebug>true</AssemblyDebug>
       <TargetMachine>MachineX86</TargetMachine>
@@ -75,7 +75,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Repos\EngineDeps\Mogre\Main\OgreSrc\ogre\lib\include;C:\Repos\EngineDeps\Mogre\Main\OgreSrc\ogre\OgreMain\include;..\Dependencies\etm-2.3.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OGRE_HOME)\lib\include;$(OGRE_HOME)\OgreMain\include;..\Dependencies\etm-2.3.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -84,7 +84,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>OgreMain.lib;EditableTerrainManager.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Repos\EngineDeps\Mogre\Main\OgreSrc\ogre\lib\lib\Release;..\Dependencies\etm-2.3.1\bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(OGRE_HOME)\lib\lib\Release;..\Dependencies\etm-2.3.1\bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
