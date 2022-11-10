@@ -23,6 +23,10 @@ distribution.
 
 #pragma once
 
+#include "OgreVector3.h"
+#include "OgreRay.h"
+#include "OgreColourValue.h"
+
 using namespace System::Runtime::InteropServices;
 
 __inline std::string GetUnmanagedString(System::String^ str) {

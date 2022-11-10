@@ -21,6 +21,5 @@ misrepresented as being the original software.
 distribution.
 */
 
-#include "Stdafx.h"
 #include "TerrainManager.h"
 #include "SplattingManager.h"

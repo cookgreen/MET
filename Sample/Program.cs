@@ -38,15 +38,9 @@ namespace Sample {
 
 			Mogre.Root root = new Mogre.Root("", "", "MainForm.log");
 
-#if DEBUG
-			root.LoadPlugin("RenderSystem_Direct3D9_d");
-			root.LoadPlugin("Plugin_OctreeSceneManager_d");
-			root.LoadPlugin("Plugin_CgProgramManager_d");
-#else
 			root.LoadPlugin("RenderSystem_Direct3D9");
 			root.LoadPlugin("Plugin_OctreeSceneManager");
 			root.LoadPlugin("Plugin_CgProgramManager");
-#endif
 
 			Mogre.RenderSystem renderSystem = root.GetRenderSystemByName("Direct3D9 Rendering Subsystem");
 			root.RenderSystem = renderSystem;
@@ -69,8 +63,8 @@ namespace Sample {
 
 			camera.AspectRatio = (float)window.Width / (float)window.Height;
 
-			Mogre.ResourceGroupManager.Singleton.AddResourceLocation("..\\..\\media", "FileSystem", "ET");
-			Mogre.ResourceGroupManager.Singleton.AddResourceLocation("..\\..\\media\\ET", "FileSystem", "ET");
+			Mogre.ResourceGroupManager.Singleton.AddResourceLocation("..\\media", "FileSystem", "ET");
+			Mogre.ResourceGroupManager.Singleton.AddResourceLocation("..\\media\\ET", "FileSystem", "ET");
 			Mogre.ResourceGroupManager.Singleton.InitialiseAllResourceGroups();
 
 			terrainManager = new MET.TerrainManager(sceneManager);

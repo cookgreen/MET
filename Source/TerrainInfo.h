@@ -24,6 +24,7 @@ distribution.
 #pragma once
 
 #include "ETTerrainInfo.h"
+#include "Util.h"
 
 namespace MET {
 
